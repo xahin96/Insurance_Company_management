@@ -1,0 +1,387 @@
+
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block; }
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+		
+		
+/* #Basic Styles
+================================================== */
+	body { 
+		background: url(../images/bg.jpg) #10a5d3;
+		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #444; 
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: none;
+ }
+	
+
+/* #Typography
+================================================== */
+	h1, h2, h3, h4, h5, h6 { 
+		color: #181818; 
+		font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;
+		font-weight: normal; }
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
+	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
+	h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+	h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
+	h5 { font-size: 17px; line-height: 24px; }
+	h6 { font-size: 14px; line-height: 21px; }
+	.subheader { color: #777; }
+
+	p { margin: 0 0 20px; }
+	p img { margin: 0; }
+	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+	
+	em { font-style: italic; }
+	strong { font-weight: bold; color: #333; }
+	small { font-size: 100%; }
+
+	
+/* #Images
+================================================== */
+	img { 
+		max-width: 100%;
+		height: auto; }
+
+			
+			
+/* #Forms
+================================================== */
+
+	form { 
+		margin-bottom: 20px; }
+	fieldset { 
+		margin-bottom: 20px; }
+	input[type="text"], 
+	input[type="password"],
+	input[type="email"],
+	textarea, 
+	select {
+		border: 1px solid #ccc;
+		padding: 6px 4px;
+		outline: none;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #777;
+		margin: 0;
+		width: 210px;
+		max-width: 100%;
+		display: block;
+		margin-bottom: 20px;
+		background: #fff; }
+	select { 
+		padding: 0; }
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="email"]:focus, 
+	textarea:focus {
+		border: 1px solid #aaa;
+ 		color: #444;
+ 		-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		box-shadow:  0 0 3px rgba(0,0,0,.2); }
+	textarea {
+		min-height: 60px; }
+	label { 
+		display: block;
+		font-weight: bold;
+		font-size: 13px;  }
+	select { 
+		width: 220px; }
+	input[type="checkbox"] {
+		display: inline; }
+	label span {
+		font-weight: normal;
+		font-size: 13px;
+		color: #444; }
+		
+	
+	.form-bg {
+		width: 370px;
+		height: 248px;
+		-moz-border-radius:9px;
+		-webkit-border-radius:9px;
+		border-radius:9px;
+		margin: 150px auto 0;
+		background: url(../images/form-bg.png) top left;
+		padding: 1em; 
+		}
+	
+	.form-bg form {
+		width: 360px;
+		height: 239px;
+		background: #fff url(../images/bg_form.jpg) repeat-x top left;		
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		-moz-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+		-webkit-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+		box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+	}
+    
+    .thought {
+        
+         width: 1175px;
+        min-height: 220px;
+        padding : 1em;
+        background: #fff url(../images/bg_form.jpg) repeat-x top left;        
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border-radius:4px;
+        -moz-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        -webkit-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        
+    }
+	
+	.form-bg form h2 {
+		font-size: 14px;
+		font-weight: bold;
+		color: #555555;
+		font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		text-shadow: 0 1px 0 #fff;
+		filter: dropshadow(color=#fff, offx=0, offy=1);
+		line-height: 45px;
+		margin-bottom: 24px;
+		margin-left:25px;
+	}
+	
+	input[type="text"], input[type="password"]{
+		box-shadow: 0px 0px 0px 4px #f2f5f7;
+		width: 100%;
+		height: 33px;
+
+		padding: 0 10px 0 10px;
+		margin: 0;
+		color: #aeaeae;
+		border: 1px solid #bec2c4;
+	}
+	
+	input[type="text"]:focus, input[type="password"]:focus{
+		box-shadow: 0px 0px 0px 4px #e0f1fc;
+		border:1px solid #7dc6dd;
+	}
+	
+	
+	button {
+		background:url(../images/login.png) no-repeat;
+		width:82px;
+		height:32px;
+		border:0px;
+		float: center;
+		margin-right: 24px;
+	}
+	
+	button:hover {
+		background:url(../images/login_hover.png) no-repeat;
+		width:82px;
+		height:32px;
+		border:0px;
+		float: center;
+	}
+	
+	button:active {
+		background:url(../images/login_active.png) no-repeat;
+		width:82px;
+		height:32px;
+		border:0px;
+		float: center;
+	}	
+	
+	
+	label {
+		display: inline;
+		margin-left: 24px;
+		vertical-align: middle;
+	}
+	
+	label span {
+		color: 555555;
+		font-size: 12px;
+	}
+	
+	p.forgot {
+		text-align: center;
+		margin-top: 10px;
+		margin-left:-55px;
+		color: #fff;
+		font-size: 12px;
+		font-weight: bold;
+		text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+	}
+.form-bg a
+{
+    text-decoration: none;
+}
+.menu {
+        
+        -moz-border-radius:9px;
+        -webkit-border-radius:9px;
+        border-radius:9px;
+        margin: 150px auto 0;
+        background: url(../images/form-bg.png) top right;
+        padding: 8px 0 0 8px;
+        width:600px;
+        height:70px;
+        margin-top:10px;
+        
+
+        }
+   
+
+.menu ul {
+   
+    list-style: none;
+}
+.menu ul li{
+    float: right;
+}
+.menu ul li a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    width:100px;
+    font-size: 20px;
+    color: #fff;
+}
+.menu ul li a:hover{
+    font-size:21px;
+    background-color: gray;
+    border-radius:4px;
+        -moz-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        -webkit-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+}
+.menu1 ul {
+   
+    list-style: none;
+}
+.menu1 ul li{
+    float: right;
+}
+.menu1 ul li a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    width:100px;
+    font-size: 20px;
+    color: #fff;
+}
+.menu1 ul li a:hover{
+    font-size:21px;
+    background-color: gray;
+    border-radius:4px;
+        -moz-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        -webkit-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+}
+
+
+.selected{
+    font-size:21px;
+    background-color: gray;
+    border-radius:4px;
+        -moz-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        -webkit-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+}
+
+ .img {
+        
+         width: 150px;
+        height: 150px;
+        padding : 0.5em;
+        margin: 1em;
+        background: #fff url(../images/bg.jpg) repeat-x top left;        
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border-radius:4px;
+        -moz-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        -webkit-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        float: left;
+        position: relative;
+    
+    
+    }
+    
+      #addNew  {
+        width: 600px;
+        height: 600px;
+        background: #fff url(../images/bg_form.jpg) repeat-x top left;        
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border-radius:4px;
+        -moz-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        -webkit-box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        box-shadow:0px 1px 3px 2px rgba(0,0,0,0.1);
+        
+    }  
+    #addNew table{
+        width: 90%;
+      //  border:dotted;
+        margin: auto;
+        
+    }
+    #addNew table td{
+      //  margin: 1em;
+        padding: 0.5em;
+        
+    }
+    
+    .label{
+        font-size: 17px;
+        color: green;
+        text-shadow: lime;
+        width: 25%;
+    }
+    .labe2{
+        font-size: 17px;
+        color: red;
+        text-shadow: lime;
+        width: 25%;
+    }
+    
+    select{
+        box-shadow: 0px 0px 0px 4px #f2f5f7;
+        width: 100%;
+        height: 33px;
+
+        //padding: 0 10px 0 10px;
+        margin: 0;
+        color: #aeaeae;
+        border: 1px solid #bec2c4;
+        font-size: 16px;
+    }
+ ​
+.datagrid table { border-collapse: collapse; text-align: right; width: 100%; }
+.datagrid {font: normal 12px/200% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 3px solid #000A0F; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; }
+.datagrid table td{ text-align: center;padding:4px;  }
+.datagrid table th { padding: 4px 4px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; color:#FFFFFF; font-size: 15px; font-weight: bold; border-left: 3px solid #000000;border-bottom: 3px solid #000000;border-top: 3px solid #000000; } .datagrid table thead th:first-child { border-bottom: 3px solid #000000; }.datagrid table tbody td { color: #00496B; border-left: 3px solid #070708;font-size: 18px;border-bottom: 3px solid #050505;font-weight: normal; }.datagrid table tbody .alt td { background: #E1EEF4; color: #00496B; }
